@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8TH86LM3HB");
+    </script>
+ 
+    <title>DCSI Dataset</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./Martian Challenge_files/img/ico.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link href="./Martian Challenge_files/css/css2" rel="stylesheet" />
+    <link href="./Martian Challenge_files/css/css2(1)" rel="stylesheet" />
+    <link href="./Martian Challenge_files/css/css2(2)" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./Martian Challenge_files/semantic.min.css"/>
+
+    <style>
+      html {
+        height: 100%;
+      }
+      .main {
+        position: relative;
+        min-height: 100%;
+        padding: 120px 0 70px 0;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      c {
+        display: block;
+        text-align: center;
+      }
+      code {
+        background-color: rgba(0, 0, 0, 0.08);
+        border-radius: 3px;
+        display: inline-block;
+        font-family: "Monaco", "Menlo", "Ubuntu Mono", "Consolas",
+          "source-code-pro", monospace;
+        font-size: 0.875em;
+        font-weight: bold;
+        padding: 1px 6px;
+        vertical-align: baseline;
+      }
+      code.line {
+        margin: 5px 0 10px 0;
+      }
+      code.block {
+        width: 100%;
+        white-space: pre;
+        margin: 0 0 10px 0;
+      }
+
+      h1 > i.icon,
+      h2 > i.icon {
+        margin-right: 5px;
+      }
+
+      .tab h1,
+      .tab h2{
+        font-family: "Source Sans Pro", sans-serif;
+        color: #888;
+        margin-top: 50px;
+        /* background: linear-gradient(0deg, #eee, #fff 60%);
+            border-radius: 15px; */
+        padding: 0 0 5px 0px;
+        /* text-align: center; */
+      }
+
+      .tab h3 {
+        font-family: "Source Sans Pro", sans-serif;
+        color: #888;
+        margin-top: 40px;
+        /* background: linear-gradient(0deg, #eee, #fff 60%);
+            border-radius: 15px; */
+        padding: 0 0 5px 0px;
+        /* text-align: center; */
+      }
+      .tab h1 {
+        border-bottom: 1px solid #e7e7e7;
+      }
+      .home h2 {
+        white-space: nowrap;
+        text-align: left !important;
+      }
+      .home p,
+      .home li,
+      .home span {
+        color: #888;
+        /* font: 16px "Source Sans Pro", sans-serif; */
+        /* font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; */
+        text-align:justify;
+        line-height:18px;  
+        /* letter-spacing:0.5px;   */
+      }
+      .home b {
+        color: #888;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .home a > b {
+        color: rgb(113, 180, 255);
+      }
+      .tab h1:nth-of-type(5n + 1) {
+        color: #31aa52;
+      }
+      .tab h1:nth-of-type(5n + 2) {
+        color: #9b59b6;
+      }
+      .tab h1:nth-of-type(5n + 3) {
+        color: #f1c40f;
+      }
+      .tab h1:nth-of-type(5n + 4) {
+        color: #e67e22;
+      }
+      .tab h1:nth-of-type(5n) {
+        color: #313397;
+      }
+
+      .tab p {
+        color: rgb(74, 74, 74);
+      }
+      .tab c {
+        font-family: "Times New Roman", Times, serif;
+      }
+      .tab img {
+        width: 100%;
+      }
+      .tab img.co {
+        position: absolute;
+        width: auto;
+        height: 20px;
+        top: 48px;
+        left: -12px;
+      }
+      .tab ul,
+      .tab ol {
+        padding-left: 20px;
+        color: #555;
+      }
+      .tab ul > li,
+      .tab ol > li {
+        padding: 3px 7px;
+      }
+      .tab .ref {
+        font: italic 13px serif;
+      }
+
+      #nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 120px;
+        background: rgb(27, 28, 29);
+        padding-top: 56px;
+        z-index: 100;
+      }
+      #nav::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url("Martian Challenge_files//img//cover.png");
+        background-position: right center;
+        z-index: -1;
+      }
+      #nav::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 255) 40%,
+          rgba(0, 0, 0, 0)
+        );
+        z-index: -1;
+      }
+      #nav > .segment {
+        width: 800px;
+        margin: 0 auto;
+        padding: 0;
+        background: none;
+      }
+      #nav > .segment > .menu {
+        border: none;
+      }
+      #nav .logo {
+        position: absolute;
+        display: table;
+        left: 0;
+        top: -60px;
+      }
+      #nav .logo > * {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      #nav .logo .title {
+        padding-left: 20px;
+      }
+      #nav .logo .title p {
+        margin: -5px;
+        font: bold 28px sans-serif;
+      }
+      .ui.segment {
+        border: none;
+        box-shadow: none;
+      }
+      .ui.tab.segment {
+        width: 800px;
+        margin: 0 auto;
+        padding: 0;
+      }
+      .right.menu > .item {
+        font-weight: bold;
+      }
+      .ui.secondary.inverted.menu .hl.item {
+        border-color: #fff;
+        color: #fff !important;
+      }
+
+      .table {
+        display: table;
+        width: 100%;
+      }
+      .table > * {
+        display: table-cell;
+      }
+
+      .tab h2:nth-of-type(n){
+        color: rgb(135, 135, 135);
+      }
+
+
+      /* .news li {
+            font-size: 18px;
+        } */
+      .people {
+        color: #777;
+        font-size: 16px;
+      }
+      .people > *:nth-child(2) {
+        padding-left: 10px;
+        color: #7af;
+      }
+      .people span {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      span.sponsor img {
+        width: auto;
+        /* max-width: 200px; */
+        height: 50px;
+      }
+      span.sponsor {
+        position: relative;
+        display: inline-flex;
+        margin: 5px 10px;
+      }
+      span.sponsor.nc::after {
+        content: "To be confirmed";
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        min-height: 25px;
+        text-align: center;
+        font: bold 8px sans-serif;
+        color: #fff;
+        background: linear-gradient(0deg, #aaa, transparent);
+        border-radius: 5px;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .ui.card {
+        display: inline-block;
+        width: 21%;
+        margin: 10px 8px;
+      }
+      .ui.card .header {
+        font-size: 14px !important;
+        white-space: nowrap;
+      }
+      .ui.card .meta > p {
+        font: 14px Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+        white-space: nowrap;
+      }
+      .ui.card .meta > a {
+        font: 14px Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+        white-space: nowrap;
+      }
+      .ui.card .meta > a.email {
+        color: skyblue;
+      }
+      .gist iframe.render-viewer {
+        height: 600px !important;
+      }
+      #footer {
+        position: absolute;
+        background: rgb(27, 28, 29);
+        width: 100%;
+        height: 30px;
+        bottom: 0;
+      }
+      #footer > * {
+        width: 800px;
+        margin: 5px auto;
+      }
+      #footer * {
+        color: #777;
+      }
+      #footer a {
+        padding: 0 0.5rem;
+        color: #ccc;
+      }
+      #footer a:hover {
+        color: #fff;
+      }
+      #footer *:nth-child(2) {
+        float: right;
+      }
+      .table-title{
+        font-family: "Times New Roman", Times, serif;
+        padding-bottom: 10px;
+      }
+
+    </style>
+
+    <script src="./Martian Challenge_files/js/vue.min.js"></script>
+    <script src="./Martian Challenge_files/js/jquery-3.1.1.min.js"></script>
+    <script src="./Martian Challenge_files/js/semantic.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Head -->
+    <div class="main">
+      <div id="nav">
+        <div class="ui inverted segment">
+          <div class="logo">
+            <img src="./Martian Challenge_files/img/ico.png" style="image-rendering: -webkit-optimize-contrast;"height="100"/>
+            <div class="title">
+              <p>DCSI</p>
+              <p>Dataset</p>
+            </div>
+          </div>
+          <div class="ui inverted secondary pointing menu">
+            <div class="right menu">
+              <a data-tab="home" class="item active">Home</a>
+
+              <a data-tab="people" class="item">People</a>
+
+              <div item="data" class="ui dropdown link item" tabindex="0">
+                <span class="text">Dataset</span> <i class="dropdown icon"></i>
+                <div class="menu" tabindex="-1">
+                  <div data-tab="data-dataset" class="item">
+                    <i class="info circle icon"></i>Overview
+                  </div>
+                  <div data-tab="data-methodology" class="item">
+                    <i class="file alternate icon"></i>Dataset Generation
+                  </div>
+                  <div data-tab="data-statistics" class="item">
+                    <i class="chart bar icon"></i>Statistics
+                  </div>
+                  <div data-tab="data-download" class="item">
+                    <i class="download icon"></i>Download
+                  </div>
+                  <div data-tab="data-tou" class="item">
+                    <i class="list alternate icon"></i>Terms and Conditions
+                  </div>
+                </div>
+              </div>
+
+              <div item="eval" class="ui dropdown link item" tabindex="0">
+                <span class="text">Participate</span>
+                <i class="dropdown icon"></i>
+                <div class="menu" tabindex="-1">
+                  <!-- <div data-tab="eval-welcoming" class="item">
+                    <i class="rocket icon"></i>Welcoming Words
+                  </div> -->
+                  <div data-tab="eval-participate" class="item">
+                    <i class="info circle icon"></i>Overview
+                  </div>
+                  <div data-tab="eval-input" class="item">
+                    <i class="file alternate icon"></i>Data Format
+                  </div>
+                  <div data-tab="eval-output" class="item">
+                    <i class="file icon"></i>Results Format
+                  </div>
+                  <div data-tab="eval-evaluation" class="item">
+                    <i class="terminal icon"></i>Evaluation
+                  </div>
+                  <div data-tab="eval-phase" class="item">
+                    <i class="tasks icon"></i>Challenge Phase
+                  </div>
+                  <div data-tab="eval-submit" class="item">
+                    <i class="upload icon"></i>Submission
+                  </div>
+                  <div data-tab="eval-award" class="item">
+                    <i class="trophy icon"></i>Awards
+                  </div>
+                  <div data-tab="eval-leaderboard" class="item">
+                    <i class="flag checkered icon"></i>Leaderboard
+                  </div>
+                </div>
+              </div>
+
+
+              <div item="res" class="ui dropdown link item" tabindex="0">
+                <span class="text">Resources</span>
+                <i class="dropdown icon"></i>
+                <div class="menu" tabindex="-1">
+                  <div data-tab="res-tutorial" class="item">
+                    <i class="book icon"></i>Tutorial
+                  </div>
+                  <div data-tab="res-contact" class="item">
+                    <i class="phone square icon"></i>Contact Us
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Home -->
+      <div name="home" data-tab="home" class="ui tab tab2 segment home active">
+  
+      <div class="table">
+          <div style="width: 100%; padding-right: 50px">
+            <h2 style="color:#313397"><i class="bullhorn icon"></i> Background</h2>
+
+            <p>
+              According to the <a href="https://www.bp.com.cn/content/dam/bp/country-sites/zh_cn/china/home/reports/bp-energy-outlook/2020/energy-outlook-2020-edition-cn.pdf.pdf" target="_blank"> 2020 Energy Outlook</a> released by 
+              <a href="https://www.bp.com/" target="_blank"> <b>BP</b></a>, global electricity 
+              demand will increase by about 80% by 2050, and the total mileage of grid 
+              expansion required globally in the next decade will be 16 million kilometers.
+               In China, with the development of UHV technology and the major national 
+               strategic plan for power transmission from west to east, the mileage of 
+               transmission lines has developed more rapidly. As of 2020, the length of 
+               transmission lines of 220kV and above in China is 794,000 kilometers 
+               (<a href="http://prpq.nea.gov.cn/uploads/file1/20211009/616135ef5d67c.pdf" target="_blank">2020 National Electricity Reliability Annual Report</a>), and the mileage 
+               of lines under construction will reach 41,000 kilometers 
+               (<a href="https://neec.no/%e5%b9%b4%e5%ba%a6%e9%87%8d%e7%a3%85-%e4%b8%ad%e5%9b%bd%e8%83%bd%e6%ba%90%e5%a4%a7%e6%95%b0%e6%8d%ae%e6%8a%a5%e5%91%8a%ef%bc%882021%ef%bc%89-%e7%94%b5%e5%8a%9b%e7%af%87/?lang=zh-hans" target="_blank">China Energy Big Data Report 2021</a>). Therefore, regular inspection of 
+               transmission lines is necessary for the long-term safe operation of 
+               the power grid.         
+             
+            </p>
+
+            <p>
+              Power inspection includes power component inspection and transmission 
+              line defect inspection. In recent years, with the development of computer
+               vision, two-stage represented by R-CNN series and single-stage represented
+                by <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Redmon_You_Only_Look_CVPR_2016_paper.html" target="_blank"
+                ><b>YOLO</b></a> and  <a href="https://openaccess.thecvf.com/content_ICCV_2019/html/Duan_CenterNet_Keypoint_Triplets_for_Object_Detection_ICCV_2019_paper.html" target="_blank"
+                ><b>CenterNet</b></a>  have achieved good detection results on various general
+                 datasets such as <a href="https://paperswithcode.com/dataset/pascal-voc" target="_blank"
+                 ><b>VOC</b></a> and <a href="https://cocodataset.org/" target="_blank"
+                 ><b>COCO</b></a>. The fast iterative update of the general 
+                 object detection algorithm makes it possible to perform accurate real-time
+                  detection of power components in power transmission scenarios.
+
+            </p>
+
+            <p>
+              To meet the needs of power component detection algorithms, 
+              we release the largest publicly available power component dataset - <a href="#data-dataset"
+              ><b>WHU</b></a>. 
+              The WHU dataset consists of two kinds of high spatial resolution UAV images,
+               with a total of 1347 scene images, covering the common types of electrical 
+               components of general power ele components, with rich annotations and complex
+                image backgrounds, which can be used for various Algorithm evaluation provides
+                 a data basis, and at the same time, it can meet the actual needs of production
+                  and provide necessary data for various engineering practices.
+
+            </p>
+
+          </div>
+          
+      </div>
+ 
+
+
+        <div class="table">
+          <div style="width: 71%; padding-right: 40px">
+            <h2 style="color:#85449f"><i class="university icon"></i> Host</h2>
+            <span class="sponsor"
+              ><img
+                src="./Martian Challenge_files/img/WHU.png"
+                style="height: 50px;image-rendering: -webkit-optimize-contrast;" /></span
+            >
+          </div>
+
+
+        </div>
+
+        <h1><i class="images outline icon"></i> Dataset Examples</h1>
+        <img
+        src="./Martian Challenge_files/img/a.jpg"
+        style="padding: 20px;  image-rendering: -webkit-optimize-contrast;"
+        />
+        <c>(a) 7 categories of power ele components</c>
+        
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <img src="./Martian Challenge_files/img/b.jpg" style="margin-top: 35px; padding: 20px;image-rendering: -webkit-optimize-contrast;"/><c
+                  >(b) Close-distance shooting (resolution: 6000*4000)</c
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./Martian Challenge_files/img/c.jpg" style="margin-top: 35px;padding: 20px;image-rendering: -webkit-optimize-contrast;" /><c
+                  >(c) Long-distance shooting (resolution: 1920*1080)</c
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+
+
+
+      <!-- People -->
+      <div name="people" data-tab="people" class="ui tab segment">
+        <h1>Collaborators</h1>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1025/1415.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/Bisheng_Yang.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1025/1415.htm"
+              target="_blank"
+              class="header"
+              >Bisheng Yang (Lead)</a
+            >
+            <div class="meta">
+              <p>Professor</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">bshyang@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1025/1364.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/ChiChen.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1025/1364.htm"
+              target="_blank"
+              class="header"
+              >Chi Chen (Co-Lead)</a
+            >
+            <div class="meta">
+              <p>Professor</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">chichen@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1026/1959.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/JianPing_Li.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1026/1959.htm"
+              target="_blank"
+              class="header"
+              >Jianping Li</a
+            >
+            <div class="meta">
+              <p>PhD</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">lijianping@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1027/1861.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/WeiTong_Wu.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1027/1861.htm"
+              target="_blank"
+              class="header"
+              >Weitong Wu</a
+            >
+            <div class="meta">
+              <p>PhD</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">weitongwu@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1027/1891.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/YangZi_Cong.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1027/1891.htm"
+              target="_blank"
+              class="header"
+              >Yangzi Cong</a
+            >
+            <div class="meta">
+              <p>PhD</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">yzcong@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1027/1846.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/Ruiqi_Ma.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1027/1846.htm"
+              target="_blank"
+              class="header"
+              >Ruiqi Ma</a
+            >
+            <div class="meta">
+              <p>PhD</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">mrq_rs@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1028/1759.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/Chen_Zhang.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1028/1759.htm"
+              target="_blank"
+              class="header"
+              >Chen Zhang</a
+            >
+            <div class="meta">
+              <p>Master</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">danica_zc@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1028/1758.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/WenLu_Sun.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1028/1758.htm"
+              target="_blank"
+              class="header"
+              >Wenlu Sun</a
+            >
+            <div class="meta">
+              <p>Master</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">sunwenlu@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1028/1752.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/ZongTian_Hu.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1028/1752.htm"
+              target="_blank"
+              class="header"
+              >Zongtian Hu</a
+            >
+            <div class="meta">
+              <p>Master</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">2019206190018@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1028/1892.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/ShaoLong_Wu.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1028/1892.htm"
+              target="_blank"
+              class="header"
+              >Shaolong Wu</a
+            >
+            <div class="meta">
+              <p>Master</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">shaolongwu@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1028/1885.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/ShangZhe_Sun.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1028/1885.htm"
+              target="_blank"
+              class="header"
+              >Shangzhe Sun</a
+            >
+            <div class="meta">
+              <p>Master</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">SSZ@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1028/1886.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/Zhengfei_Yan.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1028/1886.htm"
+              target="_blank"
+              class="header"
+              >Zhengfei Yan</a
+            >
+            <div class="meta">
+              <p>Master</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">2020206190064@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1028/1888.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/YongWei_Zheng.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1028/1888.htm"
+              target="_blank"
+              class="header"
+              >Yongwei Zheng</a
+            >
+            <div class="meta">
+              <p>Master</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">yongweizh@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1028/1881.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/YanDi_Yang.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1028/1881.htm"
+              target="_blank"
+              class="header"
+              >Yandi Yang</a
+            >
+            <div class="meta">
+              <p>Master</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">yandiyang@outlook.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1028/1883.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/Zhe_Chen.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1028/1883.htm"
+              target="_blank"
+              class="header"
+              >Zhe Chen</a
+            >
+            <div class="meta">
+              <p>Master</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">ChenZhe_WHU@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1028/1884.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/Xin_Zhao.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1028/1884.htm"
+              target="_blank"
+              class="header"
+              >Xin Zhao</a
+            >
+            <div class="meta">
+              <p>Master</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">xinzhaodc@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1028/1879.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/ZeQuan_Chen.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1028/1879.htm"
+              target="_blank"
+              class="header"
+              >Zequan Chen</a
+            >
+            <div class="meta">
+              <p>Master</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">zeeqchen@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <a
+            href="http://3s.whu.edu.cn/info/1028/1963.htm"
+            target="_blank"
+            class="image"
+            ><img src="./Martian Challenge_files/people/Ang_Jin.jpg"
+          /></a>
+          <div class="content">
+            <a
+              href="http://3s.whu.edu.cn/info/1028/1963.htm"
+              target="_blank"
+              class="header"
+              >Ang Jin</a
+            >
+            <div class="meta">
+              <p>Master</p>
+              <a>WHU, LIESMARS</a><br />
+              <a class="email">angjin@whu.edu.cn</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+
+      <!-- Dataset -->
+      <div data-tab="data-dataset" class="ui tab dummy"></div>
+      <div data-tab="data-methodology" class="ui tab dummy"></div>
+      <div data-tab="data-statistics" class="ui tab dummy"></div>
+      <div data-tab="data-download" class="ui tab dummy"></div>
+      <div data-tab="data-tou" class="ui tab dummy"></div>
+
+      <div name="dataset" data-tab="data" class="ui tab segment">
+        <h1 id="dataset">Dataset Overview</h1>
+        <p>
+          WHU is composed of the two spatial resolution of drone 
+          images shot alternately from the perspective of the distance, 
+          covering the types of power components commonly common in the
+           current transmission line, which can basically meet the 
+           needs of scientific research and engineering practice. 
+           Specifically, WHU consists of 1347 high -resolution drone images,
+            covering Insulator, Pylon, Spacer, Vibration Damper, Nameplate, Grading Ring, Nest 
+          and external intrusions in the overhead transmission lines, and there are 12050 detection boxes
+            marked. According to the ratio of 7:2:1, WHU is divided into three groups: training, verification and testing.
+
+        </p>
+        <br>
+        <img
+          src="./Martian Challenge_files/img/d.png"
+          style="padding-left: 150px;padding-right: 150px;image-rendering: -webkit-optimize-contrast;"
+        />
+        <c>(a) Spatial distribution of training datasets on Mars surface</c>
+
+
+        <!-- <h3>Reference</h3>
+        <p class="ref">
+          Vieira-e-Silva A L B, de Castro Felix H, de Menezes Chaves T,
+           et al. STN PLAD: A Dataset for Multi-Size Power Line Assets Detection 
+           in High-Resolution UAV Images[C]//2021 34th SIBGRAPI Conference on Graphics, 
+           Patterns and Images (SIBGRAPI). IEEE, 2021: 215-222.
+          <a href="https://arxiv.org/abs/2108.07944" target="_blank"
+            >URL</a>.
+        </p>  -->
+
+
+        <h1 id="methodology">Dataset Generation</h1>
+
+        <h2 style="color:rgb(191, 126, 149)">Device</h2>
+        <p>
+          The UAV image data is collected by the self-developed large-scale refined 
+          electric inspection unmanned helicopter platform. The device consists of
+           Z-5 unmanned helicopter system, transmission system and data acquisition system.         </p>
+           <p>
+            Specific workflow: After the operator on the ground enters the inspection path channel,
+             the platform will automatically detect the ground power facilities according to the inspection 
+             plan, and collect the geographic coordinate positioning data and high-resolution two-dimensional
+              images of the power facility targets in the inspection channel, and so on. 
+              The camera parameters are as follows:</p>
+
+
+
+        <!-- <table>
+          <tr>
+            <td>
+              <img
+              src="./Martian Challenge_files/img/Z-5_unmanned helicopter.png"
+              style="padding: 40px"
+            />  <c>(a) Z-5 unmanned helicopter</c>
+            </td>
+            <td>
+              <img
+              src="./Martian Challenge_files/img/data collection system.png"
+              style="padding: 40px"
+            />  <c>(b) data collection system</c>
+            </td>
+          </tr>
+        </table> -->
+
+        </br>
+        <table style="margin:auto;" width="70%" frame=hsides  >
+            <caption class="table-title" align="top">Table 1. Camera Parameters</caption> 
+              <tr  style=" height: 40px;">
+                <th></th>
+                <th>HD Camera</th>
+                <th>High Resolution Camera</th>
+
+              <tr style=" height: 30px;">
+                <td align="center">Spatial Resolution</td>
+                <td align="center">1920×1080</td>
+                <td align="center">6000×4000</td>
+                            
+              <tr style=" height: 30px;"> 
+                <td align="center">Effective Pixels</td>
+                <td align="center">2 millions</td>
+                <td align="center">24 millions</td>
+
+                <tr style=" height: 30px;">
+                  <td align="center">Field of View</td>
+                  <td align="center">5.4°×3.03°～50°×28.12°</td>
+                  <td align="center">6.65°×4.45°～13.3°×8.9°</td>
+
+                <tr style=" height: 30px;">
+                  <td align="center">Focal Length</td>
+                  <td align="center"></td>
+                  <td align="center">100mm～200mm</td> 
+        </table>
+
+        <h2 style="color:rgb(191, 126, 149)">Mode</h2>
+        <p>
+          The data collection platform includes two working modes: fine inspection and fast inspection.
+        </p>
+        <p>
+        In the fine inspection mode, the aircraft keeps a fixed distance along one side of the transmission line (the horizontal distance between the aircraft and the central axis of the tower is 35m, and the vertical distance from the top of the tower is 35m). The platform integrates an automatic tracking algorithm. During the inspection process, the high-definition camera controlled by the transmission device has been tracking the top of the transmission tower, keeping the transmission tower in the frame, and taking photos at certain time intervals until the tower disappears in the frame. Track down the next transmission tower. After the inspection on one side is completed, inspect the line on the other side. During the inspection, the inspection speed of the drone in front of the tower is 5m/s, and the inspection speed in the middle is 7m/s, and the image is 6000×4000 (4K) resolution.
+        </p>  
+        <p>
+        In the fast inspection mode, the plane flies horizontally at a fixed distance along one side of the power line, and records the inspection video. On the return trip, fly along the other side to shoot. Video was shot at 1920×1080 (1080p) resolution. In the actual work process, we adopt a data collection method combining rapid inspection and fine inspection to obtain multi-view images of far and nearsightedness, ensuring multi-scale and multi-category data.
+        </p>
+
+        <table style=" margin:auto;">
+          <tr>
+            <td>
+              <img
+              src="./Martian Challenge_files/img/Image acquisition process.jpg"
+              style="padding: 20px;max-width: 400px;image-rendering: -webkit-optimize-contrast;"
+            />  <c>(a) Image acquisition process</c>
+            </td>
+          </tr>
+        </table>
+        
+        <h2 style="color:rgb(191, 126, 149)">Route</h2>
+        <p>
+          According to power grid design specifications, transmission lines with different voltage levels correspond to different types, quantities, and specifications of transmission towers and power components. We selected 6 transmission lines with three voltage levels of 110, 220, and 500KV, with a total length of 46.96KM and a total of 131 transmission towers, covering actual scenes such as waters, woodlands, farmlands, greenhouses, and villages. At the same time, we fully considered the difference in imaging quality caused by different weather, lighting and other environments in the actual scene, and collected the drone images and high-definition videos of the above lines in December 2017 and April 2018, respectively. The shooting lines are shown in the table:
+        </p>
+        </br>
+        </br>
+
+        <table style="margin:auto;" width="100%" frame=hsides  >
+            <caption class="table-title" align="top">Table 2. Image Acquisition Circuit</caption> 
+              <tr  style=" height: 40px;">
+                <th>Number</th>
+                <th>Line</th>
+                <th>Voltage Class <br> (KV)</th>
+                <th>Line Length <br> (KM)</th>
+                <th>Starting <br> Tower</th>
+                <th>Terminate <br> Tower</th>
+                <th>Number <br> of Towers</th>
+                <th>Flight <br> Sorties</th>
+                <th>Date</th>
+
+              <tr style=" height: 30px;">
+                <td align="center">1</td>
+                <td align="center">QDJX</td>
+                <td align="center">220</td>
+                <td align="center">2.46</td>
+                <td align="center">N29</td>
+                <td align="center">N22</td>
+                <td align="center">8</td>
+                <td align="center">2</td>
+                <td align="center">2017.12.26</td>
+
+                
+                <tr style=" height: 30px;">
+                  <td align="center">2</td>
+                  <td align="center">TBJY</td>
+                  <td align="center">110</td>
+                  <td align="center">8.49</td>
+                  <td align="center">N40</td>
+                  <td align="center">N50</td>
+                  <td align="center">11</td>
+                  <td align="center">2</td>
+                  <td align="center">2017.12.26</td>
+
+                <tr style=" height: 30px;">
+                  <td align="center">3</td>
+                  <td align="center">BAX</td>
+                  <td align="center">110</td>
+                  <td align="center">2.21</td>
+                  <td align="center">N13</td>
+                  <td align="center">N6</td>
+                  <td align="center">8</td>
+                  <td align="center">2</td>
+                  <td align="center">2017.12.26</td>
+
+                  <tr style=" height: 30px;">
+                    <td align="center">4</td>
+                    <td align="center">JKJY</td>
+                    <td align="center">220</td>
+                    <td align="center">23.7</td>
+                    <td align="center">N16</td>
+                    <td align="center">N96</td>
+                    <td align="center">81</td>
+                    <td align="center">2</td>
+                    <td align="center">2018.4.19</td>
+
+                    <tr style=" height: 30px;">
+                      <td align="center">5</td>
+                      <td align="center">QLY</td>
+                      <td align="center">500</td>
+                      <td align="center">5.6</td>
+                      <td align="center">N4</td>
+                      <td align="center">N16</td>
+                      <td align="center">13</td>
+                      <td align="center">2</td>
+                      <td align="center">2018.4.29</td>
+
+                      <tr style=" height: 30px;">
+                        <td align="center">6</td>
+                        <td align="center">QLE</td>
+                        <td align="center">500</td>
+                        <td align="center">4.5</td>
+                        <td align="center">N5</td>
+                        <td align="center">N14</td>
+                        <td align="center">10</td>
+                        <td align="center">2</td>
+                        <td align="center">2018.4.29</td>
+                    	
+        </table>
+
+
+
+        <h1 id="statistics">Samples and Statistics</h1>
+        <h2 style="color:rgb(222,192,98)">Dataset Samples</h2>
+
+        <img
+        src="./Martian Challenge_files/img/a.jpg"
+        style="padding: 20px;image-rendering: -webkit-optimize-contrast;"
+        />
+        <c>(a) 7 categories of power ele components</c>
+        
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <img src="./Martian Challenge_files/img/b.jpg" style="margin-top: 35px; padding: 20px;image-rendering: -webkit-optimize-contrast;"/><c
+                  >(b) Close-distance shooting (resolution: 6000*4000)</c
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./Martian Challenge_files/img/c.jpg" style="margin-top: 35px;padding: 20px;image-rendering: -webkit-optimize-contrast;" /><c
+                  >(c) Long-distance shooting (resolution: 1920*1080)</c
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+
+        <br />
+        <p>
+          The above figures list a few example images in our datasets. There are
+          7 categories of power ele components (see Figure (a)). 
+          Some can be Close-distance shooting corresponding to a resolution of 6000*4000(see Figure (b)). 
+          Others can be Long-distance shooting corresponding to a resolution of 1920*1080(see Figure (c)).
+        </p>
+
+        <h2 style="color:rgb(222,192,98)">Dataset Analysis</h2>
+        <p>
+          The WHU dataset consists of 1347 high-resolution UAV images, 
+          covering common power components in 7 types of overhead transmission lines including Insulator, Pylon, Spacer, Vibration Damper, Nameplate, Grading Ring, Nest
+          and external intrusions. A total of 12050 detection frames are marked.
+           Limited by the specific requirements and design regulations of transmission lines, 
+           not only the number of large-scale and small-scale power components differs greatly, 
+           but the number of power components of the same scale is also very different, 
+           and the WHU data set has a long-tailed distribution phenomenon. In addition,
+            WHU fully considers the needs of practical applications when collecting data.
+             The captured transmission lines include waters, farmland, villages, 
+             woodlands and other surface coverage types, and the background complexity is high, 
+             ensuring the diversity of the dataset images. 
+        </p>
+      </br>
+    </br>
+
+    <table style="margin:auto;" width="60%" frame=hsides  >
+        <caption class="table-title" align="top">Table 3. Overview of the WHU dataset</caption> 
+          <tr  style=" height: 40px;">        				
+            <th>Asset</th>
+            <th>Instance</th>
+            <th>Image</th>
+            <th>Instance/Image</th>
+            <th>Image Size</th>
+
+          <tr style=" height: 30px;">
+            <td align="center">7</td>
+            <td align="center">12050</td>
+            <td align="center">1347</td>
+            <td align="center">8.95</td>
+            <td align="center">6000*4000 or 1920*1080</td>
+                  
+    </table>
+
+
+    <table style="margin:auto;margin-top: 30px;" width="100%" frame=hsides  >
+      <caption class="table-title" align="top">Table 4. Number of different types of power ele components</caption> 
+        <tr  style=" height: 40px;">        				
+          <th>Vibration Damper</th> 
+          <th>Insulator</th>
+          <th>Grading Ring</th> 
+          <th>Tower</th>
+          <th>Nameplate</th> 
+          <th>Nest</th> 
+          <th>Spacer</th>
+
+        <tr style=" height: 30px;">
+          <td align="center">4111</td>
+          <td align="center">3339</td>
+          <td align="center">2104</td>
+          <td align="center">1316</td>
+          <td align="center">969</td>
+          <td align="center">121</td>
+          <td align="center">90</td>
+                
+    </table>
+
+
+
+        <h1 id="download">Download</h1>
+        <h2 style="color:rgb(144,92,64)">Dataset</h2>
+        <p>
+          The dataset can be downloaded through
+          <a
+            href="http://cici.lab.asu.edu/competition/2022_GeoAI_Martian_Challenge_Dataset.zip"
+            target="_blank"
+            >2022 WHU Dataset</a>
+
+          (21.3G). It contains all images, annotations of the training and
+          validation sets.
+          Please refer to
+          <a href="#eval-input"
+            ><b>Data Format</b></a
+          >
+          for detailed introduction.
+        </p>
+
+        <h2 style="color:rgb(144,92,64)">COCO API</h2>
+        <p>
+          The evaluation metrics used in this page follow the same metrics
+          used in the
+          <a href="https://cocodataset.org/#detection-eval" target="_blank"
+            >COCO detection challenge</a
+          >
+          with slight modification. Therefore, our evaluation program requires
+          some functions in the
+          <a href="https://github.com/cocodataset/cocoapi" target="_blank"
+            >COCO API</a
+          >. Participants should install COCO API using the following commands:
+        </p>
+        <ul>
+          <li>pip package installer:</li>
+          <code class="line">pip install pycocotools</code>
+          <li>Conda package installer:</li>
+          <code class="line">conda install -c conda-forge pycocotools</code>
+          <li>
+            Build from
+            <a href="https://github.com/cocodataset/cocoapi" target="_blank"
+              >source</a
+            >.
+          </li>
+        </ul>
+
+
+        <h1 id="tou">Terms and Conditions</h1>
+        <h2 style="color:rgb(108,113,152)">Website</h2>
+        <p>
+          The design of our website follows that of the COCO challenge (<a
+            href="https://cocodataset.org/"
+            >https://cocodataset.org</a
+          >), allowing participants who are familiar with other AI challenges to
+          more easily navigate on our website. But the source code of our
+          website is completely different from that of COCO. Both the COCO
+          website and our website is licensed under
+          <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
+            >Creative Commons Attribution 4.0 International License</a
+          >.
+        </p>
+        <h2 style="color:rgb(108,113,152)">Software - Evaluation Tools</h2>
+        <p>
+          The evaluation code provided in this challenge was a modification from
+          the COCO challenge. Original code has Copyright (c) 2015 by the COCO
+          Consortium. Revised code has Copyright (c) 2021 by the
+          <a href="http://cici.lab.asu.edu/" target="_blank">DCSI</a>.
+          All rights reserved.
+        </p>
+        <p>
+          Redistribution and use software in source and binary form, with or
+          without modification, are permitted provided that the following
+          conditions are met:
+        </p>
+        <ul>
+          <li>
+            Redistributions of source code must retain the above copyright
+            notice, this list of conditions and the following disclaimer.
+          </li>
+          <li>
+            Redistributions in binary form must reproduce the above copyright
+            notice, this list of conditions and the following disclaimer in the
+            documentation and/or other materials provided with the distribution.
+          </li>
+          <li>
+            Neither the name of the COCO Consortium nor the names of its
+            contributors may be used to endorse or promote products derived from
+            this software without specific prior written permission.
+          </li>
+        </ul>
+        <br />
+        <p>
+          THIS SOFTWARE AND ANNOTATIONS ARE PROVIDED BY THE COPYRIGHT HOLDERS
+          AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+          INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+          MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+          IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+          ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+          DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+          GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+          INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+          IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+          OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+          ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        </p>
+
+        <h2 style="color:rgb(108,113,152)">WHU Dataset</h2>
+        <p>
+          The images in the dataset are obtained from the global Mars mosaic of
+          the work by
+          <i class="ref"
+            >"Edwards, C. S., et al. "Mosaicking of global planetary image
+            datasets: 1. Techniques and data processing for Thermal Emission
+            Imaging System (THEMIS) multi‐spectral data." Journal of Geophysical
+            Research: Planets 116.E10 (2011)"</i
+          >. and courtesy of the U.S. Geological Survey. We appreciate the
+          authors and the U.S. Geological Survey Department of the Interior/USGS
+          for providing the resource at no cost.
+        </p>
+
+      </div>
+      <div data-tab="eval-welcoming" class="ui tab dummy"></div>
+      <div data-tab="eval-participate" class="ui tab dummy"></div>
+      <div data-tab="eval-input" class="ui tab dummy"></div>
+      <div data-tab="eval-output" class="ui tab dummy"></div>
+      <div data-tab="eval-evaluation" class="ui tab dummy"></div>
+      <div data-tab="eval-phase" class="ui tab dummy"></div>
+      <div data-tab="eval-submit" class="ui tab dummy"></div>
+      <div data-tab="eval-award" class="ui tab dummy"></div>
+      <div data-tab="eval-leaderboard" class="ui tab dummy"></div>
+      <div name="participate" data-tab="eval" class="ui tab segment">
+      
+      
+      
+      <h1 id="participate">Participation Overview</h1>
+        <p>
+          The WHU dataset is available
+          <a href="#data-download"
+            ><b>here</b></a
+          >. It contains images, annotations and related files. Annotations of the training and evaluation
+          sets are publicly available but those of the testing set will not be
+          released. We will provide the means to evaluate models on the testing
+          data through an evaluation server. The evaluation set with annotations
+          is provided for debugging purposes, such as result format checking,
+          submission testing, and result consistency checking between
+          participants’ local machines and the evaluation server.
+        </p>
+        <p>
+          Participants are encouraged to develop systems built using any methods
+          with the provided training data. The testing data must be used solely
+          for reporting results. Any form of use of the testing data for
+          training is strictly forbidden. The tuned models should then be run
+          only once on the testing data. In order to finetune the model, the
+          evaluation set can be utilized to evaluate the model during training.
+          Participants can also divide the training data into multiple sets with
+          strategies like n-fold cross-validation. The detection results of the
+          testing set are submitted to an evaluation server on
+          <a
+            href="https://codalab.lisn.upsaclay.fr/competitions/1934"
+            target="_blank"
+            ><b>Codalab</b></a
+          >. Results must be in the correct format in order to be evaluated on
+          the evaluation server. When submitting the results, please provide
+          necessary information such that we are able to share your work on the
+          leaderboard. Detailed information is introduced in the following
+          sections.
+        </p>
+        <h1 id="input">Data Format</h1>
+        <p>The data structure of the dataset is as follows:</p>
+        <code class="block"
+          >COCO1364/ --images
+          --annotations --lables --class --coco1374.yaml --lables.zip </code
+        >
+        <p>
+          The <b>images</b> folder contains a set of images. Each image is a
+          RGB image of size 6000 × 4000 or 1920 × 1080 pixels resolution. 
+          The filename of the image is a 6-digit number representing
+          its image ID.
+        </p>
+        <p>
+          The <b>annotations</b> folder includes three json files : <b> train2017.json</b> , <b>val2017.json</b> , and <b>test2017.json</b>
+          .They indicate the image files, annotation results, and annotation categories used for training,
+           testing, and validation sets. The data structure is a Python dictionary where the keys are collection 
+           names (strings) and the values are object information in the corresponding collection.
+            For example, the data structure of the <b>test2017.json</b> is as follows: 
+
+        </p>
+        <code class="block"
+        ><--Filename and attribute of the 1002nd image-->
+"images": {"file_name": "001002.jpg", "height": 4000, "width": 6000, "id": 1002}
+
+<--Attribute of the 1200nd annotation: Detected in the 1200nd image, and the value of the key 'bbox' is a list of 
+insulator bounding box labels in the image, the lable format is [xmin, ymin, width, height]-->
+"annotations":{"area": 76428, "iscrowd": 0, "image_id": 1154, "bbox": [4224, 1356, 386, 198], 
+              "category_id": 2, "id": 1200, "ignore": 0, "segmentation": []}
+
+<--List of detection types-->   
+"categories": {"supercategory": "none", "id": 1, "name": "pylon"}</code>
+
+
+        <img
+          src="./Martian Challenge_files/img/e.jpg"
+          style="padding: 20px 20%;image-rendering: -webkit-optimize-contrast;"
+        />
+
+      
+        
+        <h1 id="output">Results Format</h1>
+        <p>
+          The detection results must be in a correct format in order to be
+          evaluated locally or on the server. The result format is similar to
+          the file format in <b>train2017.json</b>. It is a Python dictionary,
+          and the detection output format is a list containing
+          <code>[xmin, ymin, width, height]</code>. The data
+          structure of the result would look like:
+        </p>
+        <code class="block"
+          >"annotations":{"area": 76428, "iscrowd": 0, "image_id": 1154, "bbox": [4224, 1356, 386, 198], 
+              "category_id": 2, "id": 1200, "ignore": 0, "segmentation": []}</code
+        >
+        <p>
+          For an image without any object detected, the result would be an empty
+          list.
+        </p>
+
+        
+        <h1 id="evaluation">Evaluation Guidelines</h1>
+        <p>
+          To measure the performance of a model, participants can generate
+          evaluation metrics on the detection results. This can be done either
+          locally or on the evaluation server. To evaluate a detection result of
+          an image, annotation of the image is required. Therefore, in your
+          local environments, participants can perform evaluation on the
+          detection results of the training set, evaluation set or the
+          combination of them. Evaluation on any testing image will result in an
+          error. On the server side, we provide evaluation on the detection
+          results of the validation set and the testing set only. The evaluation
+          metrics on the validation set can be used for submission or evaluation
+          consistency tests because both sides can generate evaluation metrics
+          on it.
+        </p>
+        <p>
+          On the local side, the python file <b>evaluate.py</b> in the dataset
+          is used for evaluation. The function has one input: the detection
+          results. The detection results can be either in a Python dictionary
+          with the correct
+          <a href="http://cici.lab.asu.edu/martian/#eval-output"
+            ><b>result format</b></a
+          >
+          or a JSON file containing the dictionary. Participants can either
+          import the evaluate function or execute <b>evaluate.py</b> directly.
+        </p>
+        <ul>
+          <li>Import as a function.</li>
+          <code class="block"
+            >from evaluate import evaluate evaluate(detection_results)</code
+          >
+          <li>Execute <b>evaluate.py</b> directly.</li>
+          <code class="block">$ python evaluate.py detection_results_file</code>
+        </ul>
+        <p>
+          The function will print out the evaluation metrics and return a list
+          containing all values in the metrics used in this project. The
+          metrics are the same as those used in the
+          <a href="https://cocodataset.org/#detection-eval" target="_blank"
+            >COCO detection challenge</a
+          >
+          except for the definition except for the definition of object scales.
+          Please refer to the detail of the metrics in the
+          <a href="https://cocodataset.org/#detection-eval" target="_blank"
+            >COCO detection challenge</a
+          >. 
+        </p>
+        <code class="block"
+          >**Average Precision (AP):** AP % AP at IoU=.50:.05:.95 **(primary
+          challenge metric)** APIoU=.50 % AP at IoU=.50 (PASCAL VOC metric)
+          APIoU=.75 % AP at IoU=.75 (strict metric) **AP Across Scales:**
+          APsmall % AP for small craters: area &lt;= 10^2 APmedium % AP for
+          medium craters: 10^2 &lt; area &lt;= 50^2 APlarge % AP for large
+          craters: area &gt; 50^2 **Average Recall (AR):** ARmax=1 % AR given 1
+          detection per image ARmax=10 % AR given 10 detections per image
+          ARmax=100 % AR given 100 detections per image **AR Across Scales:**
+          ARsmall % AR for small objects: area &lt;= 10^2 ARmedium % AR for
+          medium objects: 10^2 &lt; area &lt;= 50^2 ARlarge % AR for large
+          objects: area &gt; 50^2
+        </code>
+        <h1 id="phase">Challenge Phase</h1>
+        <p>
+          There are two phases in the progress: validation phase and main
+          phase.
+        </p>
+        <h2>Validation Phase</h2>
+        <p>
+          Validation phase runs evaluation on the detection results of the
+          validation set. The main purpose is to allow participants to test
+          their GeoAI model’s training and testing flow, output formats,
+          submission, evaluation, and other needed steps in this competition.
+          For example, participants can test if the same evaluation scores
+          (i.e., prediction accuracy) can be obtained when results are tested on
+          one’s local server using <b>evaluate.py</b> as compared to the codalab
+          server. The submission limit for the validation phase is 10
+          submissions per day and 100 submissions in total.
+        </p>
+        <h2>Main Phase</h2>
+        <p>
+          Main phase runs evaluation on the testing set (135 images). Once
+          training is complete, participants can run the model on the testing
+          set, generate predictions and upload the results to the evaluation
+          server (main phase). The submission steps can be found in the next
+          section. The evaluation metrics on the testing set are the primary
+          standard used for ranking in this challenge. The submission limit on
+          the main phase is two (2) submissions per day and six (6) submissions
+          total.
+        </p>
+        <h1 id="submit">Submission</h1>
+        <p>
+          Submitting results allows you to participate in the challenge and
+          compare your results to state-of-the-art results on the public
+          leaderboard. Note that the evaluation server only provides evaluation
+          for the validation set (<a
+            href="http://cici.lab.asu.edu/martian/#eval-phase"
+            ><b>Validation phase</b></a
+          >) and the testing set (<a
+            href="http://cici.lab.asu.edu/martian/#eval-phase"
+            ><b>Main phase</b></a
+          >). Below introduces the steps for submitting results to the
+          evaluation server:
+        </p>
+        <ol>
+          <li>
+            Create an account on
+            <a href="https://codalab.lisn.upsaclay.fr/" target="_blank"
+              >CodaLab</a
+            >. Only one account for each team is allowed. Please add “team name”
+            in your account settings.
+          </li>
+          <li>
+            Find the GeoAI challenge through this
+            <a
+              href="https://codalab.lisn.upsaclay.fr/competitions/1934"
+              target="_blank"
+              ><b>link</b></a
+            >. Click on the "Participate" tab to register the challenge.
+          </li>
+          <li>
+            Send an email request to
+            <a href="mailto:geoai@googlegroups.com">geoai@googlegroups.com</a>
+            for approval. The email should use “Request for Challenge Approval”
+            as the subject and include team name, member names, contact email,
+            proof of identification, along with your CodaLab account. Check the
+            <a href="http://cici.lab.asu.edu/martian/#eval-award"
+              >next section</a
+            >
+            for qualification.
+          </li>
+          <li>
+            Prepare a folder containing your detection results and zip the
+            folder. The results should be in a JSON file, and only one JSON file
+            can be submitted for each submission. Check
+            <a href="http://cici.lab.asu.edu/martian/#eval-output"
+              ><b>Results Format</b></a
+            >
+            for the requested format on the detection result.
+          </li>
+          <li>
+            Click on the “Participate” tab and select “Submit / View Results”.
+            Choose an appropriate phase (validation phase or main phase), and
+            then you will be given the option to submit new results.
+          </li>
+          <li>
+            Click “Submit”. A pop-up window will prompt you to select the
+            results zip file for upload. After the file is uploaded, the
+            evaluation server will begin processing. To view the status of your
+            submission, please click “Refresh Status”. Please be patient, the
+            evaluation normally takes less than 5 minutes to complete.
+          </li>
+          <li>
+            After you submit your results to the evaluation server, you can
+            control whether your evaluation result will be publicly posted to
+            the leaderboard. Only one result can be published to the leaderboard
+            at any time.
+          </li>
+          <li>
+            After the evaluation is complete, and the server shows a status of
+            “Finished”, you will have the option to download your evaluation
+            results by selecting “View scoring output log”.
+          </li>
+        </ol>
+
+        <h1 id="leaderboard">Leaderboard</h1>
+      </div>
+      <div data-tab="res-tutorial" class="ui standalone tab segment">
+        <h1>GeoAI Martian Challenge Tutorial</h1>
+        <a
+          href="https://colab.research.google.com/drive/17OAd1A9mhua42lVDafT8Cw-FvJrn7RAp"
+          target="_blank"
+          ><img
+            src="./Martian Challenge_files/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"
+            alt="Open In Colab"
+            data-canonical-src="https://colab.research.google.com/assets/colab-badge.svg"
+            class="co"
+        /></a>
+        <link
+          rel="stylesheet"
+          href="./Martian Challenge_files/gist-embed-c4fdeba9c558.css"
+        />
+        <div id="gist111247747" class="gist">
+          <div translate="no" class="gist-file">
+            <div class="gist-data">
+              <div
+                class="js-gist-file-update-container js-task-list-container file-box"
+              >
+                <div
+                  id="file-geoai_martian_challenge_tutorial-ipynb"
+                  class="file my-2"
+                >
+                  <div
+                    itemprop="text"
+                    class="Box-body p-0 blob-wrapper data type-jupyter-notebook"
+                  >
+                    <div class="render-wrapper">
+                      <div
+                        data-identity="8363878b-c4fd-4e02-aa97-f0ec6a436592"
+                        data-host="https://notebooks.githubusercontent.com"
+                        data-type="ipynb"
+                        class="render-container is-render-pending js-render-target"
+                      >
+                        <svg
+                          width="64"
+                          height="64"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          data-view-component="true"
+                          class="octospinner mx-auto anim-rotate"
+                          style="
+                            box-sizing: content-box;
+                            color: var(--color-icon-primary);
+                          "
+                        >
+                          <circle
+                            cx="8"
+                            cy="8"
+                            r="7"
+                            stroke="currentColor"
+                            stroke-opacity="0.25"
+                            stroke-width="2"
+                            vector-effect="non-scaling-stroke"
+                          ></circle>
+                          <path
+                            d="M15 8a7.002 7.002 0 00-7-7"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            vector-effect="non-scaling-stroke"
+                          ></path>
+                        </svg>
+                        <div class="render-viewer-error">
+                          Sorry, something went wrong.
+                          <a
+                            href="https://gist.github.com/chiayuhsu/307bff362ded94e32ef038d6937d38fd.js"
+                            >Reload?</a
+                          >
+                        </div>
+                        <div class="render-viewer-fatal">
+                          Sorry, we cannot display this file.
+                        </div>
+                        <div class="render-viewer-invalid">
+                          Sorry, this file is invalid so it cannot be displayed.
+                        </div>
+                        <iframe
+                          src="./Martian Challenge_files/ipynb.html"
+                          sandbox="allow-scripts allow-same-origin allow-top-navigation"
+                          title="File display"
+                          name="8363878b-c4fd-4e02-aa97-f0ec6a436592"
+                          class="render-viewer"
+                        >
+                          Viewer requires iframe.
+                        </iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="gist-meta">
+              <a
+                href="https://gist.github.com/chiayuhsu/307bff362ded94e32ef038d6937d38fd/raw/63b8b7a29cb93ea9ebe17cba02a8dc91e3a2ffc4/GeoAI_Martian_Challenge_tutorial.ipynb"
+                style="float: right"
+                >view raw</a
+              >
+              <a
+                href="https://gist.github.com/chiayuhsu/307bff362ded94e32ef038d6937d38fd#file-geoai_martian_challenge_tutorial-ipynb"
+              >
+                GeoAI_Martian_Challenge_tutorial.ipynb
+              </a>
+              hosted with ❤ by <a href="https://github.com/">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-tab="res-contact" class="ui standalone tab segment">
+        <h1>Contact Us</h1>
+        <p>
+          For any technical questions (e.g., data, evaluation code, Codalab
+          etc.) about our competition, please contact
+          <a href="mailto:geoai@googlegroups.com">geoai@googlegroups.com</a>.
+        </p>
+        <p>
+          For collaboration and sponsorship, please contact Prof. Wenwen Li at
+          <a href="mailto:wenwen@asu.edu">wenwen@asu.edu</a>.
+        </p>
+        <p>
+          All our collaborators’ contact information can be found in the
+          <a href="http://cici.lab.asu.edu/martian/#people"><b>People</b></a>
+          tab.
+        </p>
+      </div>
+      <div data-tab="welcoming" class="ui standalone tab segment">
+        <h1>Welcome to the 2022 GeoAI Martian Challenge!</h1>
+        <p>
+          The 2022 GeoAI Martian Challenge is the very first in the series of
+          GeoAI challenges hosted by the
+          <a href="http://cici.lab.asu.edu/" target="_blank"
+            >Cyberinfrastructure and Computational Intelligence Lab (CICI)</a
+          >
+          and the
+          <a href="https://sgsup.asu.edu/SPARC" target="_blank"
+            >Spatial Analysis Research Center (SPARC)</a
+          >
+          of Arizona State University (ASU). This is a collaboration among
+          researchers from multiple disciplines, organizations and sectors,
+          including ASU, U.S. Geological Survey (USGS), Jet Propulsion
+          Laboratory (JPL), Oak Ridge National Lab, Esri, Google and American
+          Geographical Society. The goal of this object detection challenge is
+          to broaden the participation of, but not limited to, students and
+          early career scholars in geospatial sciences, computer science, Earth
+          and space sciences, data science, and fields relevant to this exciting
+          research community. Through this challenge, we also hope to form a
+          strong research network to facilitate collaboration among researchers
+          and practitioners from different disciplines to jointly promote
+          cutting-edge GeoAI research and education, as well as their
+          translational solutions to problems in a wide range of environmental
+          and social science domains. Virtual hands-on training sessions on
+          designing and developing AI and deep learning models will be offered
+          during the open period of this challenge (March 2022 to September
+          2022), so this is more than a challenge but also a platform for
+          developing and diversifying the next-generation (Geo)AI workforce.
+        </p>
+        <p>
+          This year, our focus is detecting craters on Mars’ surface, so we have
+          named it the GeoAI Martian Challenge. This is to celebrate the
+          anniversary of the successful landing of the Mars Perseverance rover
+          on the red planet on February 18, 2021. We hope this event will
+          promote the applications of cutting-edge AI technology in planetary
+          and geospatial sciences, contribute to the exploration of future human
+          life in space, and allow us to bring this experience back to Earth to
+          study the changing environment of our living planet. In this object
+          detection challenge, we have prepared Mars crater datasets that
+          contain over 100,000 images and 300,000 craters located in nearly
+          every corner of the Mars surface. Our goal is to encourage
+          participants to develop novel GeoAI models for detecting the locations
+          of craters on each image. The craters can be as small as ~100 meters
+          in diameter or up to 2km in diameter. So, this is an interesting and
+          challenging AI object detection problem. More information about the
+          dataset and the details for the competition can be found here:
+          <a href="http://cici.lab.asu.edu/martian"
+            >http://cici.lab.asu.edu/martian</a
+          >.
+        </p>
+        <p>
+          This challenge is open literally to everyone who is interested in AI
+          and geospatial sciences. Participants can be individuals or a team of
+          AI fans. We especially encourage students, early-career scholars,
+          women and underrepresented minorities to participate this event. We
+          will select the top three solutions of the competition for a cash
+          award (First prize: $500, Second prize: $300, Third prize: $200), a
+          certificate as well as a generous gift from Esri. Selected
+          participants will also have the opportunity to conduct internship in
+          the CICI lab of ASU. We look forward to your participation!
+        </p>
+        <br />
+        <p>
+          Professor Wenwen Li<br />
+          School of Geographical Sciences and Urban Planning<br />
+          Arizona State University<br />
+        </p>
+      </div>
+      <div id="footer">
+        <div>
+          <a href="#home"
+            >DCSI Dataset</a
+          >
+          <!-- <span
+            ><a
+              href="http://my.statcounter.com/project/standard/stats.php?project_id=12722907&amp;guest=1"
+              target="_blank"
+              >View My Stats</a
+            >
+            |&nbsp;
+            <a href="http://cici.lab.asu.edu/martian/#data-tou"
+              >Terms of Use</a
+            ></span
+          > -->
+        </div>
+      </div>
+    </div>
+
+    <!-- visitor count -->
+    <script type="text/javascript">
+      var sc_project = 12722907;
+      var sc_invisible = 1;
+      var sc_security = "539d3738";
+    </script>
+    <script
+      type="text/javascript"
+      src="./Martian Challenge_files/counter.js.下载"
+      async=""
+    ></script>
+
+    <script>
+      new Vue({
+        el: ".main",
+        data: {
+          news: [
+            {
+              date: "03/01/2022",
+              text: 'Our GeoAI Challenge is announced! Read welcoming words <a href="#welcoming"><b>here</b></a>.',
+            },
+            {
+              date: "01/01/2022",
+              text: "Our GeoAI Challenge will be announced soon! This year, our theme is Mars crater detection. Let's explore the space together!",
+            },
+          ],
+          people: {
+            collab: [
+              {
+                name: "Wenwen Li",
+                pos: "Lead",
+                affil: "Arizona State U.",
+                Affil: "Arizona State University",
+                title: "Professor",
+                link: "http://www.public.asu.edu/~wenwenl1/",
+                email: "wenwen@asu.edu",
+              },
+              {
+                name: "Chia-Yu Hsu",
+                pos: "Co-lead",
+                affil: "Arizona State U.",
+                Affil: "Arizona State University",
+                title: "Asst Research Professional",
+                email: "chiayuhsu@asu.edu",
+              },
+              {
+                name: "Mark Wronkiewicz",
+                affil: "NASA JPL",
+                Affil: "NASA Jet Propulsion Laboratory",
+                title: "Data Scientist",
+                link: "https://ml.jpl.nasa.gov/people/wronkiewicz/wronkiewicz.html",
+                email: "wronk@jpl.nasa.gov",
+              },
+              {
+                name: "Samantha Arundel",
+                affil: "USGS",
+                Affil: "U.S. Geological Survey",
+                title: "Research Geographer",
+                link: "https://www.usgs.gov/staff-profiles/samantha-t-arundel",
+                email: "sarundel@usgs.gov",
+              },
+              {
+                name: "Sizhe Wang",
+                affil: "Arizona State U.",
+                Affil: "Arizona State University",
+                title: "Ph.D. Student",
+                email: "wsizhe@asu.edu",
+              },
+              {
+                name: "Budhendra Bhaduri",
+                affil: "ORNL",
+                Affil: "Oak Ridge National Laboratory",
+                title: "Corporate Research Fellow",
+                link: "https://www.ornl.gov/staff-profile/budhu-l-bhaduri",
+                email: "bhaduribl@ornl.gov",
+              },
+              {
+                name: "Christopher Tucker",
+                affil: "AGS",
+                Affil: "American Geographical Society",
+                title: "Chairman",
+                link: "https://americangeo.org/adl-team/christopher-tucker/",
+                email: "tucker@americangeo.org",
+              },
+              {
+                name: "Canserina Kurnia",
+                affil: "Esri",
+                title: "Senior Solution Engineer",
+                email: "ckurnia@esri.com",
+              },
+              {
+                name: "Ed Parsons",
+                affil: "Google",
+                title: "Geospatial Technologist",
+                link: "https://research.google/people/EdParsons/",
+                email: "eparsons@google.com",
+              },
+            ],
+            advisor: [
+              {
+                name: "Michael Goodchild",
+                affil: "UCSB",
+                Affil: "UC Santa Barbara",
+                title: "Emeritus Professor",
+                pos: "Chair",
+                link: "https://people.geog.ucsb.edu/~good/",
+                email: "good@geog.ucsb.edu",
+              },
+              {
+                name: "Jim Bell",
+                affil: "Arizona State U.",
+                Affil: "Arizona State University",
+                title: "Professor",
+                link: "http://jimbell.sese.asu.edu/",
+                email: "jim.bell@asu.edu",
+              },
+              {
+                name: "Anna Liljedahl",
+                affil: "WCRC",
+                Affil: "Woodwell Climate Research Center",
+                title: "Associate Scientist",
+                link: "https://www.woodwellclimate.org/staff/anna-liljedahl",
+                email: "aliljedahl@woodwellclimate.org",
+              },
+              {
+                name: "Lynn Usery",
+                affil: "USGS",
+                Affil: "U.S. Geological Survey",
+                title: "Senior Scientist",
+                link: "https://www.usgs.gov/staff-profiles/e-lynn-usery",
+                email: "usery@usgs.gov",
+              },
+            ],
+          },
+          partner: [
+            { logo: "asu.png" },
+            { logo: "usgs.png" /*nc: 1*/ },
+            { logo: "esri.png" },
+            { logo: "ags.png" },
+            { logo: "ornl.svg" },
+            { logo: "google.png" },
+          ],
+          sponsor: [
+            { logo: "cici.png" },
+            { logo: "sparc.png" },
+            // { logo: 'nsf.png', nc: 2 },
+          ],
+        },
+        computed: {
+          collab_sorted: function () {
+            return this.people.collab
+              .filter((x) => {
+                let key = x.name.split(" ");
+                key = [key[key.length - 1], ...key.slice(0, key.length - 1)];
+                key = key.join("_");
+                x.key = key;
+                return 1; //!x.nc;
+              })
+              .sort((a, b) => {
+                return a.key < b.key ? -1 : 1;
+              });
+          },
+        },
+        methods: {
+          getImage: function (p) {
+            return (
+              "src/people/" + p.name.toLowerCase().replaceAll(" ", "_") + ".jpg"
+            );
+          },
+        },
+      });
+
+      $(".ui.dropdown").dropdown({
+        transition: "fade up",
+        action: "hide",
+      });
+      $(".menu .item").tab({
+        onVisible: function (path) {
+          $(".menu .item").removeClass("active hl");
+          $(".dropdown.visible").removeClass("visible");
+          $(".dropdown .menu").removeClass("visible");
+          $(".dropdown .menu").addClass("hidden");
+          $(`.dropdown[item=${path.split("-")[0]}]`).addClass("hl");
+
+          window.location.hash = "#__tmp";
+          window.location.hash = "#" + path;
+        },
+      });
+
+      function applyhash(wait) {
+        const hash = window.location.hash || "#home";
+        if (hash == "#__tmp") return;
+        window.location.hash = hash;
+
+        gtag("event", `tab_${hash.substr(1)}`, {
+          hash: hash,
+        });
+
+        const p = hash.substr(1).split("-");
+        $(".menu .item").removeClass("active hl");
+        $(".ui.tab").removeClass("active");
+        $(`.dropdown[item=${p[0]}]`).addClass("hl");
+        $(`.item[data-tab=${hash.substr(1)}]`).addClass("active");
+        $(`.ui.tab[data-tab=${p[0]}]`).addClass("active");
+        $(`.ui.standalone.tab[data-tab=${hash.substr(1)}]`).addClass("active");
+
+        setTimeout(() => {
+          $("html,body").scrollTop(
+            p.length > 1 ? $("#" + p[1]).offset().top - 130 : 0
+          );
+        }, wait);
+      }
+      window.addEventListener("hashchange", () => {
+        applyhash();
+      });
+      $(() => {
+        applyhash(100);
+      });
+    </script>
+  </body>
+</html>
